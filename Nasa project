@@ -404,5 +404,5 @@ SELECT SUM(Space_Flights)Number_of_Space_Flights,
         ELSE "OLD"
     END as Decade
 From astronauts group by Decade Order BY Number_of_Space_Flights; 
-Select Name,Year,Status from astronauts Where Status="Active" AND Year >= 1990;
+Select Name,Year,Status from astronauts Where Status="Active" AND Year >= 1990 ORDER BY Year;
 
