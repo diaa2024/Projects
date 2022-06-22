@@ -1,0 +1,52 @@
+CREATE TABLE celebs (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT , movie TEXT );
+INSERT INTO celebs (name,movie) VALUES ("Jhonny Depp","Pirates Of The Carrebian");
+INSERT INTO celebs (name,movie) VALUES ("Amber Herd","Aquaman");
+INSERT INTO celebs (name,movie) VALUES ("Nicole Kidman","The North Man");
+INSERT INTO celebs (name,movie) VALUES ("Tom Cruise","Top Gun");
+INSERT INTO celebs (name,movie) VALUES ("Channing Tatum","24 Jump Street");
+INSERT INTO celebs (name,movie) VALUES ("Jenna Dewan","Step Up");
+INSERT INTO celebs (name,movie) VALUES ("Angelina Jolie","Salt");
+INSERT INTO celebs (name,movie) VALUES ("Brad Pitt","Furry");
+INSERT INTO celebs (name,movie) VALUES ("Ben Affleck","Justice League");
+INSERT INTO celebs (name,movie) VALUES ("Jennifer Garner","Elektra");
+INSERT INTO celebs (name,movie) VALUES ("Anna Paquin","X-Men");
+INSERT INTO celebs (name,movie) VALUES ("Stephen Moyer","Confession");
+INSERT INTO celebs (name,movie) VALUES ("Daniel Craig","Spectre");
+INSERT INTO celebs (name,movie) VALUES ("Rachel Weisz","The Mummy");
+INSERT INTO celebs (name,movie) VALUES ("Kit Harington","Game of Thrones");
+INSERT INTO celebs (name,movie) VALUES ("Rose Leslie","Game of Thrones");
+INSERT INTO celebs (name,movie) VALUES ("Michael Fassbender","X-Men");
+INSERT INTO celebs (name,movie) VALUES ("Alicia Vikander","Tomb Raider");
+INSERT INTO celebs (name,movie) VALUES ("Annette Bening","Bugsy");
+INSERT INTO celebs (name,movie) VALUES ("Warren Beatty","Bugsy");
+INSERT INTO celebs (name,movie) VALUES ("Miley Cyrus","LOL");
+INSERT INTO celebs (name,movie) VALUES ("Liam Hemsworth","Paranoia");
+
+CREATE TABLE couples (id INTEGER PRIMARY KEY AUTOINCREMENT, actor1_id INTEGER , actor2_id INTEGER );
+INSERT INTO couples (actor1_id,actor2_id) VALUES (1,2);
+INSERT INTO couples (actor1_id,actor2_id) VALUES (3,4);
+INSERT INTO couples (actor1_id,actor2_id) VALUES (5,6);
+INSERT INTO couples (actor1_id,actor2_id) VALUES (7,8);
+INSERT INTO couples (actor1_id,actor2_id) VALUES (9,10);
+INSERT INTO couples (actor1_id,actor2_id) VALUES (11,12);
+INSERT INTO couples (actor1_id,actor2_id) VALUES (13,14);
+INSERT INTO couples (actor1_id,actor2_id) VALUES (15,16);
+INSERT INTO couples (actor1_id,actor2_id) VALUES (17,18);
+INSERT INTO couples (actor1_id,actor2_id) VALUES (19,20);
+INSERT INTO couples (actor1_id,actor2_id) VALUES (21,22);
+INSERT INTO couples (actor1_id,actor2_id) VALUES (23,24);
+
+
+select a.name, b.name from couples
+    join celebs a 
+    on actor1_id=a.id 
+    Join celebs b 
+    ON actor2_id=b.id;
+
+select a.name, b.name from couples
+    join celebs a 
+    on actor1_id=a.id 
+    Join celebs b 
+    ON actor2_id=b.id
+WHERE a.movie=b.movie;
+
