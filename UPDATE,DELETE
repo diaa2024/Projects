@@ -1,0 +1,8 @@
+Create table game (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, score INTEGER);
+Insert into game (name,score) VALUES ("diaa",6524);
+Insert into game (name,score) VALUES ("david",7465);
+Insert into game (name,score) VALUES ("mary",4987);
+Insert into game (name,score) VALUES ("joseph",7984);
+
+update game set score=8101 where id=1;
+delete from game where id=4;
